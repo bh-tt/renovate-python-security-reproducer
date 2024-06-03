@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "osvVulnerabilityAlerts": true,
+  "customManagers": [{
+    "customType": "regex",
+    "fileMatch": "^dmz/it/repositories/pypirepo/values-allowlist.yml$",
+    "matchStrings": ["pypi\\.allowlist\\.\"(?<depName>.+?)\"\\.min=(?<currentValue>.+?)\\n"],
+    "datasourceTemplate": "pypi"
+  }],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "packageRules": [
+    {"matchPackagePatterns": ["*"], "enabled": false}
+  ]
+}
