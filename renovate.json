@@ -7,7 +7,7 @@
   "customManagers": [{
     "customType": "regex",
     "fileMatch": "^dmz/it/repositories/pypirepo/values-allowlist.yml$",
-    "matchStrings": ["pypi\\.allowlist\\.\"(?<depName>.+?)\"\\.min=(?<currentValue>.+?)\\n"],
+    "matchStrings": ["pypi\\.allowlist\\.\"(?<depName>.+?)\"\\.min=(?<currentValue>.+?)"],
     "datasourceTemplate": "pypi"
   }],
   "vulnerabilityAlerts": {
